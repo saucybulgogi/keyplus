@@ -1,0 +1,87 @@
+# Written in 2017 by anthon.garza24@gmail.com
+# This file is released into the public domain as per the CC0 Public Domain
+# Dedication (http://creativecommons.org/publicdomain/zero/1.0/)
+---
+# Dactyl keyboard layout
+
+name: "Dactyl"
+version: 0
+report_mode: auto_nkro # options: auto_nkro, 6kro, nkro
+
+devices:
+  "Dactyl Left":
+    id: 0
+    scan_mode:
+      mode: col_row
+      rows: 6
+      cols: 6
+      # maps how keys are physically wired, to how they appear visually
+      matrix_map: [
+        r0c0, r0c1, r0c2, r0c3, r0c4, r0c5,
+        r1c0, r1c1, r1c2, r1c3, r1c4, r1c5,
+        r2c0, r2c1, r2c2, r2c3, r2c4, r2c5,
+        r3c0, r3c1, r3c2, r3c3, r3c4, r3c5,
+        r4c0, r4c1, r4c2, r4c3, r4c4, r4c5,
+        r5c0, r5c1, r5c2, r5c3, r5c4, r5c5,
+      ]
+    layout: dactyl_layout
+    layout_offset: 0
+
+  "Dactyl Right":
+    id: 1
+    scan_mode:
+      mode: col_row
+      rows: 6
+      cols: 6
+      matrix_map: [
+        r0c0, r0c1, r0c2, r0c3, r0c4, r0c5,
+        r1c0, r1c1, r1c2, r1c3, r1c4, r1c5,
+        r2c0, r2c1, r2c2, r2c3, r2c4, r2c5,
+        r3c0, r3c1, r3c2, r3c3, r3c4, r3c5,
+        r4c0, r4c1, r4c2, r4c3, r4c4, r4c5,
+        r5c0, r5c1, r5c2, r5c3, r5c4, r5c5,
+      ]
+    layout: dactyl_layout
+    layout_offset: 1
+
+layouts:
+  dactyl_layout:
+    default_layer: 0
+    layers: [
+      [ # layer 0
+        [ # left
+            '=', 1, 2, 3, 4, 5,
+            tab, q, w, e, r, t,
+            L1, a, s, d, f, g,
+            lsft, z, x, c, v, b,
+            caps, '`', lalt, left, right, lctl,
+            lgui, bspc, del, app, mnxt, ____,
+        ],
+        [ # right
+            6, 7, 8, 9, 0, "-",
+            y, u, i, o, p, '\',
+            h, j, k, l, ";", "'",
+            n, m, ",", ".", "/", rsft,
+            esc, left, down, up, right, mute,
+            lalt, mply, L1, SPC, ent, ____,
+        ]
+      ], 
+      [ # layer 1
+        [ # left
+          ____, F1, F2, F3, F4, F5,
+          ____, "!", "@", "{", "}", "|",
+          ____, "#", "$", "(", ")", "`",
+          ____, "%", "^", "[", "]", "~",
+          ____, ____, ____, ____, ____, ____,
+          ____, ____, ____, ____, ____, ____,
+        ],
+        [ # right
+          F6,   F7,   F8,   F9,   F10, F11
+          volu, 7,    8,    9,    "*", F12,
+          vold, 4,    5,    6,    "+", "/",
+          caps, 1,    2,    3,    0,   ____,
+          ____, home, pgdn, pgup, end, ____,
+          ____, ____, ____, ____, ____, ____,
+        ]
+      ]
+    ]
